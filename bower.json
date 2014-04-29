@@ -1,6 +1,6 @@
 {
-  "name": "jquery-readingtime",
-  "version": "0.1.1",
+  "name": "jquery-readingtime-forked",
+  "version": "0.1.2",
   "main": "jquery.readingtime.min.js",
 
   "ignore": [
