@@ -3,10 +3,16 @@
 
     var settings = $.extend({
       wpm:    250,
-      round:  'round'
+      round:  'round',
     }, options);
 
-    var words = $.trim(this.first().text()).split(/\s+/).length;
-    return Math[settings.round](words/settings.wpm);
+    var words = ($.type(options) === 'number' ) ?
+      options : $.trim(this.first().text()).split(/\s+/).length;
+
+    console.log(words, "words");
+
+    var eta = Math[settings.round](words/settings.wpm);
+    console.log(eta, 'eta')
+    return (eta < 1) ? 'Less than a minute' : eta + ' mins';
   };
 }(jQuery));
